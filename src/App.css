@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/background.jpg'); /* Указываем путь к фоновой картинке */
+  background-size: cover; /* Фон будет покрывать всё пространство */
+  background-position: center; /* Центрируем фон */
+  background-repeat: no-repeat; /* Запрещаем повторять фон */
+  height: 100vh; /* Высота страницы равна высоте экрана */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+  color: white; /* Текст белый, чтобы он был виден на фоне */
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для контента */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 20px;
+  margin: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
