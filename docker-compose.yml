@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    runtime: runsc  # Sandbox mode via gVisor
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true  # Read-only filesystem
+    tmpfs:
+      - /tmp  # Temp dir in RAM
+    network_mode: "none"  # No network access
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'  # 1 CPU core
+          memory: 512M  # 512 MB RAM
