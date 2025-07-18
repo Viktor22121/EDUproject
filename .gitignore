@@ -1,3 +1,4 @@
+
 .env
 hashes_db.json
 submissions.log
@@ -5,3 +6,4 @@ submissions.log
 __pycache__/
 admin_token.json
 token.json
+
