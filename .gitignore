@@ -1,0 +1,7 @@
+.env
+hashes_db.json
+submissions.log
+*.pyc
+__pycache__/
+admin_token.json
+token.json

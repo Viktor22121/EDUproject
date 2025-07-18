@@ -1,0 +1,8 @@
+Step 3:
+Test 1: {"status":"ok","user_id":"test-id","hash":"9652c57342bab8e956cb05bda9a30cb04c7bdf682cc0c988935462efcafac1eb"}
+Test 2: {"detail":"Обнаружено похожее решение"}
+Test 3: {"detail":"Код содержит опасные конструкции"}
+
+Step 4:
+Test 1: {"detail":"Недостаточно прав"}
+Test 2: {"message":"Доступ разрешен"}
