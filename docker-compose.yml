@@ -1,23 +1,29 @@
-
-
 services:
-  backend:
+  education-api:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
-    runtime: runsc  # Sandbox mode via gVisor
     security_opt:
       - no-new-privileges:true
     cap_drop:
       - ALL
-    read_only: true  # Read-only filesystem
+    read_only: true
     tmpfs:
-      - /tmp  # Temp dir in RAM
-    network_mode: "none"  # No network access
+      - /tmp
+    #network_mode: "none"
     deploy:
       resources:
         limits:
-          cpus: '1.0'  # 1 CPU core
-          memory: 512M  # 512 MB RAM
+          cpus: '1.0'
+          memory: 512M
+    volumes:
+      - type: bind
+        source: ./submissions.log
+        target: /app/submissions.log
+        read_only: true
+      - type: bind
+        source: ./hashes_db.json
+        target: /app/hashes_db.json
+        read_only: true
