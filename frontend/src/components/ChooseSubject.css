@@ -1,0 +1,83 @@
+/* Общий контейнер */
+.choose-subject-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+.title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Список предметов */
+.subjects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Расстояние между элементами */
+}
+
+/* Карточка предмета */
+.subject-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Иконка */
+.subject-icon {
+  font-size: 2rem;
+  color: #0d6efd;
+  margin-right: 15px;
+}
+
+/* Информация о предмете */
+.subject-info {
+  flex: 1;
+  text-align: left;
+}
+
+.subject-info h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.subject-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* Кнопка "Начать" */
+.btn {
+  padding: 10px 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0b5ed7;
+}
